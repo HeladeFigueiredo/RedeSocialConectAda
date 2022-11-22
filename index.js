@@ -18,6 +18,15 @@ const Bg2 = document.querySelector('.bg-2');
 const Bg3 = document.querySelector('.bg-3');
 
 
+//FUNCIONALIDADES
+const btnSearch = document.querySelector('.uil-search');
+
+//Efetuar consulta
+btnSearch.addEventListener('click',()=>{
+    
+});
+//input-search
+
 //SIDEBAR
 //REmove class active menu itens
 const changeActiveItem = () => {

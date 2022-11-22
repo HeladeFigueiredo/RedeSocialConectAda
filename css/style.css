@@ -286,6 +286,10 @@ main .container .left .profile {
 }
 
 /******************CENTRO************************/
+.middle{
+    width: 40vw;
+}
+
 .middle .stories {
     display: flex;
     justify-content: space-between;
@@ -432,6 +436,10 @@ main .container .left .profile {
 
 
 /********************DIREITA***********************/
+.right{
+    width: 15vw;
+}
+
 main .container .right { 
     height: max-content;
     position: sticky;
@@ -439,7 +447,7 @@ main .container .right {
     bottom: 0;
 }
 
-.right .messages { 
+.right .messages{ 
     background: var(--color-white);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
@@ -448,7 +456,7 @@ main .container .right {
 .right .messages .heading {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-betweens;
     margin-bottom: 1rem;
 }
 
@@ -798,5 +806,4 @@ main .container .right {
     .customize-theme .card{
         width: 92vw;
     }
-
 }
