@@ -23,12 +23,12 @@ const btnSearch = document.querySelector('.uil-search');
 
 //Efetuar consulta
 btnSearch.addEventListener('click',()=>{
-    
+    const word = document.getElementById('input-search').value;
+    /*Acesso alguma classe para buscar possíveis amigo*/
 });
-//input-search
 
 //SIDEBAR
-//REmove class active menu itens
+//Remove class active menu itens
 const changeActiveItem = () => {
     menuItens.forEach(item => {
         item.classList.remove('active');
@@ -52,9 +52,9 @@ menuItens.forEach(item => {
 //MENSAGENS
 
 const searchMessage = () => {
-    const val = messageSearch.value.toLowerCase();
-    message.forEach(user => {
-        let name = user.querySelectorAll('h5').textContent.toLowerCase();
+    const val = messageSearch.value.toLowerCase();  
+    message.forEach(user => {        
+        let name = user.querySelector('h5').textContent.toLowerCase();        
         if (name.indexOf(val) != -1) {
             user.style.display = 'flex';
         } else {
@@ -115,36 +115,31 @@ fontSizes.forEach(size => {
         removeSizeSelector();
         let fontSize;
         size.classList.toggle('active');
-
         //alert('Muda tamanho');
         if (size.classList.contains('font-size-1')) {
             fontSize = '10px';
-            root.style.setProperty('----sticky-top-left', '5.4rem');
-            root.style.setProperty('----sticky-top-right', '5.4rem');
+            root.style.setProperty('--sticky-top-left', '5.4rem');
+            root.style.setProperty('--sticky-top-right', '5.4rem');
         } else if (size.classList.contains('font-size-2')) {
             fontSize = '13px';
-            root.style.setProperty('----sticky-top-left', '5.4rem');
-            root.style.setProperty('----sticky-top-right', '-7rem');
+            root.style.setProperty('--sticky-top-left', '5.4rem');
+            root.style.setProperty('--sticky-top-right', '-7rem');
         } else if (size.classList.contains('font-size-3')) {
             fontSize = '16px';
-            root.style.setProperty('----sticky-top-left', '-2rem');
-            root.style.setProperty('----sticky-top-right', '-17rem');
+            root.style.setProperty('--sticky-top-left', '-2rem');
+            root.style.setProperty('--sticky-top-right', '-17rem');
         } else if (size.classList.contains('font-size-4')) {
             fontSize = '19px';
-            root.style.setProperty('----sticky-top-left', '-5rem');
-            root.style.setProperty('----sticky-top-right', '-25rem');
+            root.style.setProperty('--sticky-top-left', '-5rem');
+            root.style.setProperty('--sticky-top-right', '-25rem');
         } else if (size.classList.contains('font-size-5')) {
             fontSize = '22px';
-            root.style.setProperty('----sticky-top-left', '-10rem');
-            root.style.setProperty('----sticky-top-right', '-35rem');
+            root.style.setProperty('--sticky-top-left', '-10rem');
+            root.style.setProperty('--sticky-top-right', '-35rem');
         }
-
         //Modifiar elemento root
         document.querySelector('html').style.fontSize = fontSize;
-
     })
-
-
 })
 
 
