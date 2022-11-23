@@ -1,3 +1,42 @@
+// Pega lista de usuários do Localstora para posteriormente verificar se existem informações
+let listaUsuario = localStorage.getItem("usuarios")
+
+// Caso a lista de usuários esteja vazia, cria usuários e os adiciona ao localstorage
+if(listaUsuario === null){
+
+    // Lista de usuários em JSON
+    let usuarioString = `
+    [
+        {
+            "nome" : "Vinicius Mendonsa", 
+            "email" : "vinicius@mail.com",
+            "nomeUsuarioCadastrado" : "vinicius",
+            "senhaCadastrada" : "123456",
+            "listaAmigos": "",
+            "foto": "https://algumacoisa.com/ddddd"
+        },
+        {
+            "nome" : "Annie Santana", 
+            "email" : "annie@mail.com",
+            "nomeUsuarioCadastrado" : "annie",
+            "senhaCadastrada" : "456123",
+            "listaAmigos": "",
+            "foto": "https://algumacoisa.com/ddddd"
+        },
+        {
+            "nome" : "Ian Carvalho", 
+            "email" : "ian@mail.com",
+            "nomeUsuarioCadastrado" : "ian",
+            "senhaCadastrada" : "78945",
+            "listaAmigos": "",
+            "foto": "https://algumacoisa.com/ddddd"
+        }
+    ]
+    `
+    // Adicionando ao localstorage a chave "usuarios" com o valor igual a string usuarioString
+    localStorage.setItem("usuarios", usuarioString)
+}
+
 //SIDEBAR
 const menuItens = document.querySelectorAll('.menu-item');
 
