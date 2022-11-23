@@ -1,4 +1,4 @@
-class LoginUsuario {
+class Autenticador {
    
     autenticarUsuario(usuarioDigitado, senhaDigitada){
 
