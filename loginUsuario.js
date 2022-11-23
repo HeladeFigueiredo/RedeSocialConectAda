@@ -1,24 +1,21 @@
-class LoginUsuario extends Usuario {
-    #usuarioDigitado;
-    #senhaDigitada
+class LoginUsuario {
+   
+    autenticarUsuario(usuarioDigitado, senhaDigitada){
 
-    constructor(usuarioDigitado, senhaDigitada) {
-     super(id, nome, email, nomeUsuarioCadastrado,senhaCadastrada)
-       this.#usuarioDigitado;
-        this.#senhaDigitada = senhaDigitada;
-    }
+        // Coleta usuários salvos no localStorage e converte em um objeto
+        const usuariosCadastrados = JSON.parse(localStorage.getItem("usuarios"))
 
-    verificarUsuario(usuarioDigitado, senhaDigitada){
-        if(this.#senhaDigitada === senhaCadastrada && this.#usuarioDigitado === this.nomeUsuarioCadastrado){
-            console.log('Acesso permitido')
-        }else
-        console.log('acesso negado')
+        // Percorre o array de usuários cadastrados de um em um
+        for(let index in usuariosCadastrados){
+            let usuarioAtual = usuariosCadastrados[index]
+
+            if(usuarioDigitado === usuarioAtual.nomeUsuarioCadastrado && senhaDigitada === usuarioAtual.senhaCadastrada)
+            {
+                return true
+            }
+        }
+
     }
 }
-
-let novoUsuario = new LoginUsuario('usuario1', 12345)
-
-console.log(novoUsuario);
-
 
 

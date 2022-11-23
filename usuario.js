@@ -1,20 +1,18 @@
 class Usuario {
-	#id;
 	#nome;
 	#email;
     #nomeUsuarioCadastrado;
     #senhaCadastrada;
+    #listaAmigos
+    #foto
 
-    constructor(id, nome, email, nomeUsuarioCadastrado,senhaCadastrada){
-        this.#id = id;
+    constructor(nome, email, nomeUsuarioCadastrado,senhaCadastrada, listaAmigos, foto){
         this.#nome = nome;
         this.#email = email;
         this.#nomeUsuarioCadastrado = nomeUsuarioCadastrado;
         this.#senhaCadastrada= senhaCadastrada;
-    }
-
-    verificarUsuario(usuario, senha){
-
+        this.#listaAmigos = listaAmigos
+        this.#foto = foto
     }
 
   adicionarAmigo(){
@@ -25,5 +23,4 @@ class Usuario {
    }
   
 }
-
 
