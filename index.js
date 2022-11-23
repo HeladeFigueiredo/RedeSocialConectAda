@@ -55,13 +55,15 @@ const searchMessage = () => {
     const val = messageSearch.value.toLowerCase();  
     message.forEach(user => {        
         let name = user.querySelector('h5').textContent.toLowerCase();        
-        if (name.indexOf(val) != -1) {
+        //if (name.indexOf(val) != -1) {
+            if (name.includes(val)) {
             user.style.display = 'flex';
         } else {
             user.style.display = 'none';
         }
     })
 }
+
 
 //Busca chat
 messageSearch.addEventListener('keyup', searchMessage);
