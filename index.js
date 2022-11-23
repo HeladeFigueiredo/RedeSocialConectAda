@@ -17,7 +17,6 @@ const Bg1 = document.querySelector('.bg-1');
 const Bg2 = document.querySelector('.bg-2');
 const Bg3 = document.querySelector('.bg-3');
 
-
 //FUNCIONALIDADES
 const btnSearch = document.querySelector('.uil-search');
 
@@ -48,7 +47,6 @@ menuItens.forEach(item => {
     })
 })
 
-
 //MENSAGENS
 
 const searchMessage = () => {
@@ -64,7 +62,6 @@ const searchMessage = () => {
     })
 }
 
-
 //Busca chat
 messageSearch.addEventListener('keyup', searchMessage);
 
@@ -76,12 +73,7 @@ messagesNotification.addEventListener('click', () => {
     }, 2000);
 })
 
-
-
-
-
 //CUSTOMIZAÇÃO DO TEMA
-
 //Abrir modal
 const openThemeModal = () => {
     themeModal.style.display = 'grid';
@@ -99,17 +91,12 @@ themeModal.addEventListener('click', closeThemeModal);
 
 theme.addEventListener('click', openThemeModal);
 
-
 //Remove active do seletor de fontes
 const removeSizeSelector = () => {
     fontSizes.forEach(size => {
         size.classList.remove('active');
     });
 }
-
-
-
-
 
 //Fontes
 fontSizes.forEach(size => {
@@ -144,14 +131,12 @@ fontSizes.forEach(size => {
     })
 })
 
-
 //remove cor ativa
 const changeActiveColorClass = () => {
     colorPalette.forEach(colorPicker => {
         colorPicker.classList.remove('active');
     })
 }
-
 
 //Muda cores
 colorPalette.forEach(color => {
@@ -173,7 +158,6 @@ colorPalette.forEach(color => {
         root.style.setProperty('--primary-color-hue', primaryHue);
     });
 })
-
 
 //Muda Background
 let lightColorLightness;
@@ -202,7 +186,6 @@ Bg2.addEventListener('click', () => {
     darkColorLightness = '95%';
     whiteColorLightness = '20%';
     lightColorLightness = '15%';
-
     Bg2.classList.add('active');
     Bg1.classList.remove('active');
     Bg3.classList.remove('active');
@@ -213,7 +196,6 @@ Bg3.addEventListener('click', () => {
     darkColorLightness = '95%';
     whiteColorLightness = '10%';
     lightColorLightness = '0%';
-
     Bg3.classList.add('active');
     Bg1.classList.remove('active');
     Bg2.classList.remove('active');
