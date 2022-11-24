@@ -8,26 +8,31 @@ if(listaUsuario === null){
     let usuarioString = `
     [
         {
-            "nome" : "Vinicius Mendonsa", 
-            "email" : "vinicius@mail.com",
-            "nomeUsuarioCadastrado" : "vinicius",
+            "nomeUsuarioCadastrado": "Andre Mendonza", 
+            "email" : "andre@gmail.com",
             "senhaCadastrada" : "123456",
             "listaAmigos": "",
             "foto": "https://algumacoisa.com/ddddd"
         },
         {
-            "nome" : "Annie Santana", 
-            "email" : "annie@mail.com",
+            "nomeUsuarioCadastrado" : "Annie Santana", 
+            "email" : "annie@gmail.com",
             "nomeUsuarioCadastrado" : "annie",
-            "senhaCadastrada" : "456123",
+            "senhaCadastrada" : "123456",
             "listaAmigos": "",
             "foto": "https://algumacoisa.com/ddddd"
         },
         {
-            "nome" : "Ian Carvalho", 
-            "email" : "ian@mail.com",
-            "nomeUsuarioCadastrado" : "ian",
-            "senhaCadastrada" : "78945",
+            "nomeUsuarioCadastrado" : "Helade Carvalho", 
+            "email" : "helade@gmail.com",
+            "senhaCadastrada" : "123456",
+            "listaAmigos": "",
+            "foto": "https://algumacoisa.com/ddddd"
+        },
+        {
+            "nomeUsuarioCadastrado" : "Nathalia Almeida", 
+            "email" : "nathalia@gmail.com", 
+            "senhaCadastrada" : "123456",
             "listaAmigos": "",
             "foto": "https://algumacoisa.com/ddddd"
         }

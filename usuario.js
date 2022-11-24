@@ -1,15 +1,13 @@
 class Usuario {
-	#nome;
+	#nomeUsuarioCadastrado;
 	#email;
-    #nomeUsuarioCadastrado;
     #senhaCadastrada;
     #listaAmigos
     #foto
 
-    constructor(nome, email, nomeUsuarioCadastrado,senhaCadastrada, listaAmigos, foto){
-        this.#nome = nome;
-        this.#email = email;
+    constructor(nomeUsuarioCadastrado, email,senhaCadastrada, listaAmigos, foto){
         this.#nomeUsuarioCadastrado = nomeUsuarioCadastrado;
+        this.#email = email;
         this.#senhaCadastrada= senhaCadastrada;
         this.#listaAmigos = listaAmigos
         this.#foto = foto

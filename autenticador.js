@@ -1,6 +1,6 @@
 class Autenticador {
    
-    autenticarUsuario(usuarioDigitado, senhaDigitada){
+    autenticarUsuario(emailUsuarioDigitado, senhaDigitada){
 
         // Coleta usuários salvos no localStorage e converte em um objeto
         const usuariosCadastrados = JSON.parse(localStorage.getItem("usuarios"))
@@ -9,7 +9,7 @@ class Autenticador {
         for(let index in usuariosCadastrados){
             let usuarioAtual = usuariosCadastrados[index]
 
-            if(usuarioDigitado === usuarioAtual.nomeUsuarioCadastrado && senhaDigitada === usuarioAtual.senhaCadastrada)
+            if(emailUsuarioDigitado === usuarioAtual.email && senhaDigitada === usuarioAtual.senhaCadastrada)
             {
                 return true
             }
