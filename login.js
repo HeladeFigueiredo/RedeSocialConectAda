@@ -30,8 +30,8 @@ if(listaUsuario === null){
             "foto": "https://algumacoisa.com/ddddd"
         },
         {
-            "nomeUsuarioCadastrado" : "Nathalia Almeida", 
-            "email" : "nathalia@gmail.com", 
+            "nomeUsuarioCadastrado" : "Natalia Rocha", 
+            "email" : "natalia@gmail.com", 
             "senhaCadastrada" : "123456",
             "listaAmigos": "",
             "foto": "https://algumacoisa.com/ddddd"
