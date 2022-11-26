@@ -118,7 +118,7 @@ class Usuario {
             <div class="head">
                 <div class="user">
                     <div class="profile-photo">
-                        <img src="./images/profile-15.jpg" alt="">
+                        <img src="./images/profile-19.jpg" alt="">
                     </div>
                     <div class="ingo">
                         <h3>
