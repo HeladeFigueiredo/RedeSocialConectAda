@@ -26,7 +26,7 @@
                     Criar
                 </label>
                 <div class="profile-photo">
-                    <img src="./images/profile-1.jpg" alt="">
+                    <img src="./images/profile-1.jpg" alt="" id="config-imagem-perfil">
                 </div>
             </div>
         </div>
@@ -43,10 +43,10 @@
                         <img src="./images/profile-1.jpg" alt="">
                     </div>
                     <div class="hundle">
-                        <h4>Nome Usuário</h4>
-                        <p class="text-muted">
+                        <h4 id="recebe-nome-usuario"></h4>
+                        <!--p class="text-muted">
                             @username
-                        </p>
+                        </p-->
                     </div>
                 </a>
 
@@ -55,7 +55,7 @@
                         <span><i class="uil uil-home"></i></span>
                         <h3>Home</h3>
                     </a>
-                    <a class="menu-item">
+                    <a class="menu-item" id="btn-conexoes">
                         <span><i class="uil uil-users-alt"></i></span>
                         <h3>Conexões</h3>
                     </a>
@@ -113,9 +113,9 @@
                         <h3>Tema</h3>
                     </a>
 
-                    <a class="menu-item">
-                        <span><i class="uil uil-setting"></i></span>
-                        <h3>Configurações</h3>
+                    <a class="menu-item" id="meus-posts">
+                        <span><i class="uil uil-comment-dots"></i></span>
+                        <h3>Meus Posts</h3>
                     </a>
 
                 </div>
@@ -129,7 +129,7 @@
             <!----------------------CENTRO---------------------->
             <div class="middle">
                 <!----------------------POSTAGENS---------------------->
-                <div class="stories">
+                <!--div class="stories">
                     <div class="story">
                         <div class="profile-photo">
                             <img src="images/profile-10.jpg">
@@ -178,7 +178,7 @@
                             Your Story
                         </p>
                     </div>
-                </div>
+                </div-->
 
                 <!----------------------FIM DAS POSTAGENS---------------------->
                 <form action="" class="create-post">
@@ -186,16 +186,15 @@
                         <img src="images/profile-1.jpg">
                     </div>
                     <input type="text" placeholder="Digite aqui sua postagem" id="create-post">
-                    <input type="submit" value="Postar" class="btn btn-primary">
+                    <input type="button" value="Postar" class="btn btn-primary" id="cadastrarPost">
                 </form>
 
                 <!--------------------FEEDS-------------------->
-                <div class="feeds">
+                <div class="feeds" id="mostra-feeds">
                     
 
                     <div class="feed">
                         <div class="head">
-
                             <div class="user">
                                 <div class="profile-photo">
                                     <img src="./images/profile-15.jpg" alt="">
@@ -544,8 +543,8 @@
         </div>
 
     </div>
-    <script src="./usuario.js"></script>
-    <script src="./index.js"></script>
+    <script src="Usuario2.class.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
