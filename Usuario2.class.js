@@ -93,6 +93,13 @@ class Usuario {
         console.log(amigos)
     }
 
+    set curtirPost(idPost){
+        const curtidoPor = this.#usuario;
+        let curtidas = JSON.parse(localStorage.getItem('curtidas')) ?? [];
+        curtidas.push({ 'curtida': idPost, 'por': curtidoPor });
+        localStorage.setItem('curtidas', JSON.stringify(curtidas));
+    }
+
     postar(conteudoPost, linkImg) {
         //console.log(conteudoPost);  
         let idPost = (Math.random() * 100000000000000000);
@@ -155,7 +162,7 @@ class Usuario {
             let identificadorAmigo = i.useramigo;
             let postsPessoais = JSON.parse(localStorage.getItem('posts-' + identificadorAmigo)) ?? [];
             console.log(postsPessoais);
-            
+
             postsPessoais.forEach(i => {
                 content += `<div class="feed">
             <div class="head">
@@ -178,6 +185,24 @@ class Usuario {
             <div class="photo">
                 <img src="${i.imagem}" alt="">
             </div>
+
+            <span onclick="curtir(${i.idpost})"><i class="uil uil-heart"></i></span>
+            <span><i class="uil uil-comment-dots"></i></span>
+            
+            <div class="liked-by">
+                <span>
+                    <img src="https://miro.medium.com/max/1400/1*g09N-jl7JtVjVZGcd-vL2g.jpeg"
+                        alt="">
+                </span>
+                <span>
+                    <img src="https://razoesparaacreditar.com/wp-content/uploads/2021/05/pesquisa-animais-risada-capa-1068x558.png"
+                        alt="">
+                </span>
+                <p>
+                    Curtido por <b>10</b>, <b>Pessoa(s)</b>
+                </p>
+            </div>
+
             <div class="caption">
                                         <p>
                                             <b></b>${i.txtpost}                                            
@@ -185,7 +210,7 @@ class Usuario {
                                     </div>
     
                                     <div class="comment text-muted">
-                                        Visualizar todos os 50 comentários
+                                        Visualizar todos os comentários
                                     </div>
             </div>`;
 
@@ -286,11 +311,11 @@ linkMeusPost.addEventListener('click', () => {
 });
 
 //IMAGEM DE PERFIL
-const imgPerfil = document.getElementById('config-imagem-perfil');
+// const imgPerfil = document.getElementById('config-imagem-perfil');
 
-imgPerfil.addEventListener('click', () => {
-    //dadosUser.meusPosts();
-});
+// imgPerfil.addEventListener('click', () => {
+//     //dadosUser.meusPosts();
+// });
 
 
 //CONEXÕES
@@ -320,3 +345,18 @@ btnHome.addEventListener('click', () => {
 //Carregar no Início
 dadosUser.allPosts();
 
+//curtir
+function curtir(idpost){
+    dadosUser.curtirPost = idpost;
+    //alert(idpost);
+}
+
+
+//SAIR
+const btnLogoff = document.getElementById('logoff');
+btnLogoff.addEventListener('click', () => {
+    //alert('Sair');
+    if(dadosUser.logoff){
+        window.location.href = "cadastro.html";
+    };
+});
