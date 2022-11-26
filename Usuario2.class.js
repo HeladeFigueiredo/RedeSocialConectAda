@@ -82,14 +82,14 @@ class Usuario {
         //this.#amigo = nomeamigo;        
         let amigos = JSON.parse(localStorage.getItem('amigos-' + this.#usuario)) ?? [];
         amigos.forEach(e => {
-            console.log(e.useramigo,nomeamigo);
-            if (e.useramigo == nomeamigo) {   
-                     
-            }else{
-                amigos.push({'useramigo': e.useramigo });   
+            console.log(e.useramigo, nomeamigo);
+            if (e.useramigo == nomeamigo) {
+
+            } else {
+                amigos.push({ 'useramigo': e.useramigo });
             }
         });
-        localStorage.setItem('amigos-' + this.#usuario, JSON.stringify(amigos));        
+        localStorage.setItem('amigos-' + this.#usuario, JSON.stringify(amigos));
         console.log(amigos)
     }
 
@@ -130,8 +130,7 @@ class Usuario {
             </div>
             <div class="caption">
                                         <p>
-                                            <b></b>Descrição do conteúdo a ser exibido
-                                            <span class="harsh-tag">#estilo</span>
+                                            <b></b>${i.txtpost}                                            
                                         </p>
                                     </div>
     
@@ -143,6 +142,56 @@ class Usuario {
 
         });
 
+
+
+        document.getElementById("mostra-feeds").innerHTML = content;
+    }
+
+
+    allPosts() {
+        let minhasConexoes = JSON.parse(localStorage.getItem('amigos-' + this.#usuario)) ?? [];
+        let content = '';
+        minhasConexoes.forEach(i => {
+            let identificadorAmigo = i.useramigo;
+            let postsPessoais = JSON.parse(localStorage.getItem('posts-' + identificadorAmigo)) ?? [];
+            console.log(postsPessoais);
+            
+            postsPessoais.forEach(i => {
+                content += `<div class="feed">
+            <div class="head">
+                <div class="user">
+                    <div class="profile-photo">
+                        <img src="./images/profile-15.jpg" alt="">
+                    </div>
+                    <div class="ingo">
+                        <h3>
+                        ${identificadorAmigo}
+                        </h3>
+                        <small>São Paulo, 15 MINUTOS ATRÁS</small>
+                    </div>
+                    <span class="edit">
+                        <i class="uil uil-ellipsis-h"></i>
+                    </span>
+                </div>
+            </div>
+    
+            <div class="photo">
+                <img src="${i.imagem}" alt="">
+            </div>
+            <div class="caption">
+                                        <p>
+                                            <b></b>${i.txtpost}                                            
+                                        </p>
+                                    </div>
+    
+                                    <div class="comment text-muted">
+                                        Visualizar todos os 50 comentários
+                                    </div>
+            </div>`;
+
+
+            });
+        });
         document.getElementById("mostra-feeds").innerHTML = content;
     }
 
@@ -261,8 +310,13 @@ function deixarSeguir(userAmigo) {
 }
 //console.log(dadosUser.listarAmigos);
 
+//HOME
+const btnHome = document.getElementById('btn-home');
+btnHome.addEventListener('click', () => {
+    dadosUser.allPosts();
+});
 
 
-
-
+//Carregar no Início
+dadosUser.allPosts();
 
