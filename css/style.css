@@ -4,7 +4,7 @@
 /*Criação de variáveis para cores*/
 :root {
     /*Cores*/
-    --primary-color-hue : 252;
+    --primary-color-hue: 252;
     --dark-color-lightness: 17%;
     --light-color-lightness: 95%;
     --white-color-lightness: 100%;
@@ -30,8 +30,8 @@
 }
 
 /*Resetar Elementos*/
-*, 
-*::before, 
+*,
+*::before,
 *::after {
     margin: 0;
     padding: 0;
@@ -292,7 +292,7 @@ main .container .left .profile {
 }
 
 /******************CENTRO************************/
-.middle{
+.middle {
     width: 100%;
 }
 
@@ -442,18 +442,18 @@ main .container .left .profile {
 
 
 /********************DIREITA***********************/
-.right{
+.right {
     width: 100%;
 }
 
-main .container .right { 
+main .container .right {
     height: max-content;
     position: sticky;
     top: var(--sticky-top-right);
     bottom: 0;
 }
 
-.right .messages{ 
+.right .messages {
     background: var(--color-white);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
@@ -755,7 +755,7 @@ main .container .right {
         display: none;
     }
 
-    .customize-theme .card{
+    .customize-theme .card {
         width: 80vw;
     }
 
@@ -778,26 +778,30 @@ main .container .right {
         right: 0;
     }
 
-
+    .btn-seguir {
+        display: inline;
+        float: right;    
+    }
 
     /******************POPUP*********************/
-    .left .notifications-popup{
+    .left .notifications-popup {
         position: absolute;
         left: -20rem;
         width: 20rem;
     }
 
-    .left .notifications-popup::before{
+    .left .notifications-popup::before {
         display: absolute;
         top: 1.3rem;
         left: calc(20rem -0.6rem);
         display: block;
     }
 
-    main .container .middle{
+    main .container .middle {
         grid-column: 1/3;
     }
-/*
+
+    /*
     main .container .left .sidebar > div h3 {
         display: none;
     }*/
@@ -805,11 +809,12 @@ main .container .right {
     main .container .right {
         display: none;
     }
-/*
+
+    /*
     .sidebar h3 {
         display: none;
     }*/
-    .customize-theme .card{
+    .customize-theme .card {
         width: 92vw;
     }
 }
